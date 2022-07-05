@@ -27,6 +27,7 @@
 	 <%-- <c:set var="cnt" value="${cnt+1 }" />
 	  --%>
 	  <!--page 안에 있는 값은 여전히 1임   -->
+	  
 	  <c:set var="cnt" value="${cnt+1 }" scope="request" />
 	  request cnt : ${ requestScope.cnt }<br>
 		 
@@ -35,6 +36,7 @@
 	 cnt 변수 삭제 <br>
 	 <c:remove var = "cnt" scope="page"/>
 	 <!--page에 있는거 찾아서 삭제해버림  -->
+	 조재희cnt:${cnt}<br>
 	 cnt:${pageScope.cnt}<br> 
 	 request cnt : ${requestScope.cnt}<br>
  <!--실제 출력할때 core tag도 사용할 수 있더라~!   -->

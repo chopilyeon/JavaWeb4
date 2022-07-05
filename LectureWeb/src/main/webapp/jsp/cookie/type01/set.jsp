@@ -12,7 +12,7 @@
 	
 	//쿠키 전송 클라이언트한테 전송해주자~! 
 	response.addCookie(cookie);
-	//response를 안보냈는데 왜 보내지나? 
+	//response를 안보냈는데 왜 보내지나? 이거 자체가 웹브라우저로 보내는 것임.
 
 %>    
     

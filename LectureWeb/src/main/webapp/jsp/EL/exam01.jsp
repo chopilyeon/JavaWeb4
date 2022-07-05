@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%     
+  
+	pageContext.setAttribute("list", "string");
+%>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +15,7 @@
  5+5 : <%= 5+5 %><br>
 <!--EL을 사용해보자 -->
  5+5 : ${ 5+5} <br>
+
  9 % 5: ${ 9 % 5 }<br>
  9 mod 5 :${9 mod 5 }<br>
  <!--EL을 이해 못하는 경우도 있기 때문에 tomcat9에 가서 lib에서 el을 lib에 넣어주자   -->
@@ -25,7 +30,10 @@
  
  (5==5) && (7>5) : ${ (5==5) && (7>5) }<br>
  (5 eq 5) and ( 7 gt 5 ) : ${(5 eq 5 ) and (7 gt 5)}<br>
-  
+ 
+ pageScope${pageScope}<br>
+ hihi<br>
+ pageScope:${pageScope.list}<br>
   <!--empty에 대해 알아보자  -->
 
   empty str : ${empty str} <br> 

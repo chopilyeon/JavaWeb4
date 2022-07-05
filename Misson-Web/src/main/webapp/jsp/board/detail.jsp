@@ -38,6 +38,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="/Misson-Web/resources/css/bootstrap.min.css">
 <script>
 	/* if('${userVO}'==''){
 		

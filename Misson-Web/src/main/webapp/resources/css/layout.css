@@ -10,25 +10,25 @@ body{
 
 
 header{
-	margin :1%;
+	margin :1%; 
 	margin-left:15%;
 	margin-right:15%;
 	height:60px; 
-	
-	
-}
+} 
 
 section{
-	margin-left:17%;
-	margin-right:17%;
+	margin-top: 50px;
+/* 	margin-left:17%;
+	margin-right:17%; */
 	min-height:600px;
 
 	
-}
+} 
+
 footer{
-	margin-left:15%;
-	margin-right:15%;
+	/* margin-left:15%;
+	margin-right:15%; */
 	padding:20px;
 	background:lightgray;
 	
-}
+} 

@@ -10,6 +10,7 @@
 
 
 
+
 <%--
  작업순서
  1. t_board 테이블에서 전체 게시글 조회
@@ -61,10 +62,19 @@ pageContext.setAttribute("list", list);
 <meta charset="UTF-8">
 <title>게시물 목록</title>
 
-<link rel="stylesheet" href="/Misson-Web/resources/css/layout.css">
-<link rel="stylesheet" href="/Misson-Web/resources/css/table.css">
 
-<script src="/Misson-Web/resources/js/jquery-3.6.0.min.js"></script>
+
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/Misson-Web/resources/css/font.css">
+<link rel="stylesheet" href="/Misson-Web/resources/css/layout.css"> 
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
 <script>
 	$(document).ready(function(){
 		$('#addBtn').click(function(){
@@ -105,13 +115,15 @@ pageContext.setAttribute("list", list);
 			<hr>
 			<h2>전체 게시글 조회</h2>
 			<hr>
-			<table border="1" style="width: 80%">
-				<tr>
+			<table style="width: 80%" class="table">
+			  <thead>
+				<tr class="table-light">
 					<th width="7%">번호</th>
 					<th>제목</th>
 					<th width="16%">작성자</th>
 					<th width="20%">등록일</th>
 				</tr>
+			  </thead>	
 				<!--collection 요소를 가져오자~! []로 갖고 오자 -->
 				<%-- 		<tr>
 			
@@ -128,21 +140,22 @@ pageContext.setAttribute("list", list);
 			-->
 				<!--href쓸 때 javascript 명령어를 이용해 난 어떤어떤 일을 하려고 해! 저기에 번호를 넘길수도 있음  -->
 				<!--<a href="#" onclick="checkLogin">-->
+			<tbody class="table-group-divider">
 				<c:forEach items="${ list }" var="board" varStatus="loop">
-					<tr <c:if test="${loop.count mod 2 eq 0}">class="even"</c:if>>
-						<td>${ board.no }</td>
-						<td><a href="javascript:checkLogin(${board.no })"> <c:out
+					<tr <c:if test="${loop.count mod 2 eq 0}">class="even table-light"</c:if>>
+						<td class="table-light">${ board.no }</td>
+						<td class="table-light"><a href="javascript:checkLogin(${board.no })"> <c:out
 									value="${board.title }" />
 						</a> <%-- <a href="detail.jsp?no=${ board.no }">
 						 ${board.title }
 						 <c:out value="${ board.title }"/> 
 						</a> --%> <!--몇번 게시물을 볼 지 써주어야함 1번인지 2번인지 3번인지 알고 있어야 함. 제일 먼저 해석은 부터 해석하므로 해서이 가능하다! 소스보기로 한번 보자! 그러면 {}부분 숫자로 바뀌어 있음 실제 원래 코드는 안보임 우리가 볼때만 숫자로 보임 그래서 보안이 좋다고 얘기함. 순수 jsp코드는 안보이더라~!   -->
 							<!--화면에 출력하는 방식을 out태그를 이용해서 해주자~!   --></td>
-						<td>${ board.writer }</td>
-						<td>${ board.regDate }</td>
+						<td class="table-light">${ board.writer }</td>
+						<td class="table-light">${ board.regDate }</td>
 					</tr>
 				</c:forEach>
-
+			 </tbody>
 
 
 
@@ -174,7 +187,7 @@ pageContext.setAttribute("list", list);
 			</table>
 			<br>
 			<c:if test="${not empty userVO }">
-				<button id="addBtn">새글등록</button>
+				<button id="addBtn"><a href="writeForm.jsp">새글등록</a></button>
 			</c:if>
 		</div>
 
@@ -182,7 +195,7 @@ pageContext.setAttribute("list", list);
 	</section>
 	<footer>
 		<%@ include file="/jsp/include/footer.jsp"%>
-		footer부분
+		<!-- footer부분 -->
 		<!--include xml forward 에서는 root의 의미는 밑에는 localhost:9999/mission-Web임 상대경로를 못쓰는 이유?  -->
 		<!--원래는 localhost:9999임   -->
 

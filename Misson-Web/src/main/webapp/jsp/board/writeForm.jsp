@@ -8,6 +8,15 @@
 
 <link rel="stylesheet" href="/Misson-Web/resources/css/layout.css">
 <link rel="stylesheet" href="/Misson-Web/resources/css/table.css">
+<link rel="stylesheet" href="/Misson-Web/resources/css/bootstrap.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/Misson-Web/resources/css/font.css">
+<link rel="stylesheet" href="/Misson-Web/resources/css/layout.css">
+
+
 
 <script src="/Misson-Web/resources/js/jquery-3.6.0.min.js"></script>
 <script>
@@ -147,7 +156,7 @@
 </section>
 <footer>
 		<%@ include file="/jsp/include/footer.jsp"%>
-		footer부분
+<!-- 		footer부분 -->
 		<!--include xml forward 에서는 root의 의미는 밑에는 localhost:9999/mission-Web임 상대경로를 못쓰는 이유?  -->
 		<!--원래는 localhost:9999임   -->
 

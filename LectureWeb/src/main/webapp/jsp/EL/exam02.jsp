@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +11,7 @@
 
 
 <%--
-	http:/localhost:9999/jsp/e1/exam02.jsp?id=aaa&name=bbb 요청을 했다는 가정하에... 처리하고 싶다 날라온 id의 값과 name의 값을 출력해주고 싶네?~! 
+	http://localhost:9999/LectureWeb/jsp/EL/exam02.jsp?id=aaa&name=bbb&hobby=ttt요청을 했다는 가정하에... 처리하고 싶다 날라온 id의 값과 name의 값을 출력해주고 싶네?~! 
 	id와 name을 알기 위해 getParameter로 추출할 수 있음. 
  --%>
 <%
